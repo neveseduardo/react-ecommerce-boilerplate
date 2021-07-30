@@ -1,0 +1,182 @@
+.homepage-header {
+    width: 100%;
+    height: 60px;
+    padding: 0 5%;
+    background-color: $color-white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    @media screen and (min-width: 940px) {
+        padding: 0 2rem;
+    }
+
+    .homepage-nav {
+        display: flex;
+        flex-direction: row;
+
+        h1 {
+            background-color: none;
+            margin: 0;
+            padding: 0;
+            line-height: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            flex: 2;
+
+            @media screen and (min-width: 940px) {
+                flex: 2;
+            }
+
+            a {
+                background-color: none;
+                cursor: pointer;
+            }
+        }
+
+        > form {
+            flex: 7;
+            background-color: none;
+            height: 60px;
+            line-height: 60px;
+            display: flex;
+            padding: 10px 30px;
+            margin: 0 10px;
+            display: none;
+
+            @media screen and (min-width: 940px) {
+                display: flex;
+            }
+
+            input {
+                flex: 1;
+                height: 40px;
+                border: none;
+                background-color: none;
+                color: $color-default;
+                padding: 0 1rem;
+                &::-webkit-input-placeholder {
+                    color: $color-default !important;
+                }
+            }
+
+            i {
+                background-color: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color-default;
+                padding: 0 1rem;
+            }
+        }
+
+        .homepage-right-icons ul {
+            background-color: none;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+            flex: 1;
+
+            li a {
+                display: block;
+                line-height: 60px;
+                color: $color-default;
+                padding: 0 1rem;
+            }
+        }
+
+        .homepage-sidebar {
+            opacity: 0;
+            max-width: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: opacity 300ms;
+
+            ul {
+                width: 300px;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: -300px;
+                background-color: $color-white;
+                transition: 350ms ease-in-out;
+                z-index: 1001;
+                list-style-type: none;
+
+                .homepage-sidebar-toggle {
+                    background-color: lighten($color-default, 50%);
+                    color: $color-default;
+                    display: flex;
+                    line-height: 50px;
+                    padding: 0 2rem;
+                }
+
+                > form {
+                    padding: 1rem 2rem;
+                    display: flex;
+                    line-height: 50px;
+                    box-sizing: border-box;
+                    
+
+                    input {
+                        flex: 1;
+                        border: none;
+                        background-color: none;
+                        color: $color-default;
+                        padding: 0 1rem;
+                        min-width: 100px;
+
+                        &::-webkit-input-placeholder {
+                            color: $color-default !important;
+                        }
+                    }
+
+                    i {
+                        color: $color-default;
+                        padding: 0 1rem;
+                    }
+
+                    @media screen and (min-width: 940px) {
+                        display: none;
+                    }
+                }
+
+                li {
+                    width: 100%;
+                    &:first-of-type {
+                        margin-top: 1rem;
+                    }
+                    a {
+                        display: block;
+                        flex: 1;
+                        height: 50px;
+                        line-height: 50px;
+                        padding: 0 2rem;
+                        color: $color-default;
+                        text-decoration: none;
+                        transition: 300ms;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .homepage-sidebar.show {
+            opacity: 1;
+            max-width: 100%;
+            transition: opacity 300ms;
+
+            ul {
+                left: 0;
+                transition: 350ms ease-in-out;
+            }
+        }
+    }
+}

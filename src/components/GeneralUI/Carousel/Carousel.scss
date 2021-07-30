@@ -1,0 +1,22 @@
+$color-default: #666666 !default;
+$color-white: #ffffff !default;
+
+.items-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+    .items {
+        display: flex;
+    
+        .item {
+            flex: none;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            } 
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+.homepage-main {
+    background-color: $color-white;
+    width: 100%;
+    min-height: 100vh;
+    padding: calc(60px + 2rem) 5% 2rem;
+
+    @media screen and (min-width: 940px) {
+        padding: calc(60px + 2rem) 2rem 2rem;
+    }
+
+    
+}
